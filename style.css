@@ -1,0 +1,181 @@
+:root {
+    --r:0;
+    --g:0;
+    --b:0;
+
+    --h:0;
+    --s:0%;
+    --l:0%;
+}
+
+
+
+nav {
+    height: 100px;
+    background-color: gray;
+    color: white;
+}
+nav li {
+    display: inline-block;
+    padding: 20px;
+}
+nav li:hover{
+    background-color: darkgray;
+}
+li a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.rgb-input {
+    position: relative;
+    bottom: 20px;
+    left: 80%;
+}
+.title {
+    margin: 20px auto; 
+    text-align: center;
+}
+.color-section {
+    border: 1px solid black;
+    margin: 50px auto; 
+    height:550px;
+    width: 600px;
+}
+
+
+
+#nav-bar {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    right: 16px;
+}
+#main-title {
+    text-align: center;
+}
+
+
+#colors {
+    display: inline;
+}
+
+
+#rgb {
+    position: relative;
+    right: 23.5%;
+}
+#rgb-content{
+    position: relative;
+    top: 15%;
+    left: 5%;
+}
+#rgb-values {
+    width: 15%;
+    position: relative;
+}
+#rgb-values li {
+    list-style: none;
+    margin-bottom: 30px;
+    position: relative;
+    bottom: 25px;
+    left: 100%;
+}
+#rgb-values input {
+    width: 65px;
+}
+#rgb-label-g {
+    position: relative;
+    right: 30%;
+}
+#rgb-label-r {
+    position: relative;
+    right: 5%;
+}
+#rgb-label-b {
+    position: relative;
+    right: 15%;
+}
+#rgb-submit {
+    width: 70px;
+    margin-top: 10px;
+    position: relative;
+    bottom: 40px;   
+    left: 130px;
+}
+#rgb-wheel {
+    border: 1px dotted black;
+    border-radius: 50%;
+    background: rgb(var(--r),var(--g),var(--b));
+    height: 250px;
+    width: 250px;
+    position: relative;
+    bottom: 300px;
+    left: 250%;
+}
+#rgb-article p{
+    position: relative;
+    bottom: 275px;
+    left: 30px;
+    margin: 0 auto;
+    width: 500px;
+}
+
+
+#hsl {
+    position: relative;
+    bottom: 715px;
+    left: 115%;
+}
+#hsl-values {
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+#hsl-values li {
+    list-style: none;
+    margin-bottom: 55px;
+}
+#hsl-values input {
+    width: 65px;
+}
+#hsl-list-h {
+    position: relative;
+    left: 6%;
+}
+#hsl-list-s {
+    position: relative;
+    right: 5px;
+}
+#hsl-list-l {
+    position: relative;
+}
+#hsl-submit {
+    position: relative;
+    left: 110px;
+}
+#hsl-wheel {
+    border: 1px dotted black;
+    border-radius: 50%;
+    background: hsl(var(--h),var(--s),var(--l));
+    height: 250px;
+    width: 250px;
+    position: relative;
+    left: 35%;
+    bottom: 300px;
+}
+#hsl-article p{
+    position: relative;
+    right: 40px;
+    bottom: 225px;
+    margin: 0 auto;
+    width: 500px;
+}
+
+
+
+footer {
+
+}

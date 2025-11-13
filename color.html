@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Color Test</title>
+    <link  href="C:\Users\AlfieDiplock\OneDrive - Pension App\Documents\IT DIR\VSCode\HTML\Color\CSS\style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 id="main-title">Color Website</h1>
+            <!--<ul id="nav-bar">
+                <li><a href="#rgb">RGB</a></li>
+                <li><a href="#hsl">HLS</a></li>
+                <li><a href="#alpha">Alpha</a></li>
+            </ul>-->
+        </nav>
+    </header>
+    <div id="colors">
+        <div id="rgb" class="color-section">
+            <h2 class="title">RGB</h2>
+            <div id="rgb-content">
+                <div  id="rgb-values">
+                    <form onsubmit="updateRGB(event)">
+                        <ul>  
+                            <li>
+                                <label id="rgb-label-r" for="rgb-r">Red: </label><input class="rgb-input" id="rgb-r" type="number" name="rgb-r" value="rgb-r" placeholder="0-255" min="0" max="255">
+                            </li>
+
+                            <li>
+                                <label id="rgb-label-g" for="rgb-g">Green: </label><input class="rgb-input" id="rgb-g" type="number" name="rgb-g" value="rgb-g" placeholder="0-255" min="0" max="255">
+                            </li>
+
+                            <li>
+                                <label id="rgb-label-b" for="rgb-b">Blue: </label><input class="rgb-input" id="rgb-b" type="number" name="rgb-b" value="rgb-b" placeholder="0-255" min="0" max="255">
+                            </li>
+                        </ul>
+                        <input id="rgb-submit" type="submit">
+                    </form>
+
+                    <p id="rgb-wheel"></p>
+
+                    <article id="rgb-article">
+                        <p>
+                            This is a simple demonstration of how changing the red, green, and blue values produces different colors. Make sure that the different values are between 0 and 255. Using 0 for all values will give you black, and 255 for white. 
+                        </p>
+                    </article>
+                </div>
+            </div>
+        <div id="hsl" class="color-section">
+            <h2 class="title">HSL</h2>
+            <div id="hsl-content">
+                <div  id="hsl-values">
+                <form onsubmit="updateHSL(event)">
+                    <ul>  
+                        <li id="hsl-list-h">
+                            <label id="hsl-label-h" for="hsl-h">Hue: </label><input id="hsl-h" type="number" name="hsl-h" value="hsl-h" placeholder="0-360" min="0" max="360">
+                        </li>
+
+                        <li id="hsl-list-s">
+                            <label id="hsl-label-s" for="hsl-s">Saturation: </label><input id="hsl-s" type="text" name="hsl-s" value="0%" maxlength="6">
+                        </li>
+
+                        <li id="hsl-list-l">
+                            <label id="hsl-label-l" for="hsl-l">Lightness: </label><input id="hsl-l" type="text" name="hsl-l" value="0%" maxlength="6">
+                        </li>
+                    </ul>
+                    <input id="hsl-submit" type="submit">
+                </form>
+                
+                <p id="hsl-wheel"></p>
+
+                <article id="hsl-article">
+                    <p>
+                        This is a simple demonstration of how changing the hue, saturation, and lightness values produces different colors. Make sure that the hue value is between 0 and 360, and the saturation and lightness values are a percentage.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </div>
+    <footer>
+        
+    </footer>
+</body>
+
+<script>
+    function updateRGB(e) {
+        e.preventDefault();
+        const r = document.getElementById("rgb-r").value;
+        const g = document.getElementById("rgb-g").value;
+        const b = document.getElementById("rgb-b").value;
+        document.documentElement.style.setProperty("--r",r);
+        document.documentElement.style.setProperty("--g",g);
+        document.documentElement.style.setProperty("--b",b);
+    }
+    function updateHSL(e) {
+        e.preventDefault();
+        const h = document.getElementById("hsl-h").value;
+        const s = document.getElementById("hsl-s").value;
+        const l = document.getElementById("hsl-l").value;
+        document.documentElement.style.setProperty("--h",h);
+        document.documentElement.style.setProperty("--s",s);
+        document.documentElement.style.setProperty("--l",l);
+    }
+</script>
